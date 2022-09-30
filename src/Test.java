@@ -6,4 +6,5 @@ public class Test {
     private String testLucas;
     private String test;
     private String huhuuuuu;
+    private String dasSollAufKeinenFallAufNenBranch;
 }
