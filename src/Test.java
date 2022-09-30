@@ -1,3 +1,3 @@
 public class Test {
-    //TESTEST
+    public boolean testSven;
 }
