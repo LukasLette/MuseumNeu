@@ -7,14 +7,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/jar_files.zip!/" />
+          <root url="file://$MODULE_DIR$/libs/jar_files" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="jar://$MODULE_DIR$/libs/jar_files.zip!/" recursive="false" />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/libs/jar_files" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/libs/jar_files" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs/jar_files" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
