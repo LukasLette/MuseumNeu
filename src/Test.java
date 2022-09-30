@@ -3,4 +3,5 @@ public class Test {
     private String stinker;
 
     //hallo Ihr Dödel!!! :)
+    private String test;
 }
