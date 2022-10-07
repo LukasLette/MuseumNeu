@@ -1,10 +1,13 @@
+package stuff;
+
 import stuff.Edelstein;
+import stuff.Material;
 
 import java.util.Collection;
 
 /**
  * Verschiedene Wertgegenstände können dieses Interface implementieren, um Teil des Programms zu werden.
- * Die unitTests benutzen dieses Interface, um bereits vor der Erstellung der eigentlichen Schmuck-Klassen
+ * Die unitTests benutzen dieses Interface, um bereits vor der Erstellung der eigentlichen stuff.Schmuck-Klassen
  * geschrieben werden zu können.
  */
 public interface Schmuck {
@@ -16,7 +19,7 @@ public interface Schmuck {
     public String getBezeichnung();
 
     /**
-     * Gibt Auskunft über das Material, aus welchem der Schmuck besteht.
+     * Gibt Auskunft über das stuff.Material, aus welchem der stuff.Schmuck besteht.
      * @return ein Wert der entsprechenden Enumeration (nicht null).
      */
     public Material getMaterial();

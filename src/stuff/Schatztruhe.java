@@ -1,3 +1,5 @@
+package stuff;
+
 import org.reflections.Reflections;
 
 import java.util.Collection;
@@ -5,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Die Schatztruhe beinhaltet eine Schatz, der aus jeweils einem Objekt von jeder Klasse besteht,
+ * Die stuff.Schatztruhe beinhaltet eine Schatz, der aus jeweils einem Objekt von jeder Klasse besteht,
  * welche {@link Schmuck} implementieren und im Verzeichnis 'schmuckstuecke' liegen.
  */
 public class Schatztruhe {

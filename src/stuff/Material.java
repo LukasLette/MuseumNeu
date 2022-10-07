@@ -1,5 +1,7 @@
+package stuff;
+
 /**
- * Das Material, aus welchem Schmuck bestehen kann.
+ * Das stuff.Material, aus welchem stuff.Schmuck bestehen kann.
  */
 public enum Material {
 
