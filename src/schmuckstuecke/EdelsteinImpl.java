@@ -3,12 +3,12 @@ package schmuckstuecke;
 
 import stuff.EdelsteinTyp;
 
-public class Edelstein implements stuff.Edelstein {
+public class EdelsteinImpl implements stuff.Edelstein {
 
     private final int karat;
     private final EdelsteinTyp edelsteinTyp;
 
-    public Edelstein(int karat, EdelsteinTyp edelsteinTyp) {
+    public EdelsteinImpl(int karat, EdelsteinTyp edelsteinTyp) {
         this.karat = karat;
         this.edelsteinTyp = edelsteinTyp;
     }
