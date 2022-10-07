@@ -1,3 +1,5 @@
+package stuff;
+
 public interface Edelstein {
 
     /**
