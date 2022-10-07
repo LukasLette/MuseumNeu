@@ -29,13 +29,13 @@ public class EdelsteinImpl implements stuff.Edelstein {
             case DIAMANT:
                return 6000 * karat;
             case SAPHIR:
-                return 5000 * karat;
+                return 250 * karat;
             case SMARAGD:
-                return 4000 * karat;
+                return 50 * karat;
             case AMETHYST:
-                return 3000 * karat;
+                return 20 * karat;
             case RUBIN:
-                return 2000 * karat;
+                return 1000  * karat;
         }
         return 0;
     }
