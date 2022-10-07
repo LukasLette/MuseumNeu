@@ -47,6 +47,27 @@ public class Halskette implements Schmuck {
 
     @Override
     public int getGesamtwertInEuro() {
-        return 900;
+        int preis = 0;
+        switch (getMaterial()){
+            case GOLD:
+                preis = 200;
+                break;
+            case SILBER:
+                preis = 100;
+                break;
+            case KATZENGOLD:
+                preis = 2;
+                break;
+            case PLATIN:
+                preis = 300;
+                break;
+            case BLECH:
+                preis = 10;
+                break;
+        }
+        for (Edelstein edelstein : edelsteine) {
+            preis += edelstein.getWert();
+        }
+        return preis;
     }
 }
