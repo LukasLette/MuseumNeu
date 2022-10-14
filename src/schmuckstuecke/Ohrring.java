@@ -1,5 +1,4 @@
 package schmuckstuecke;
-
 import stuff.Edelstein;
 import stuff.EdelsteinTyp;
 import stuff.Material;
