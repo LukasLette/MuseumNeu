@@ -8,34 +8,34 @@ import stuff.Schmuck;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Armband implements Schmuck {
+public class Brosche implements Schmuck {
 
     private ArrayList<Edelstein> edelsteine;
 
-    public Armband() {
-        EdelsteinImpl diamant = new EdelsteinImpl(5, EdelsteinTyp.DIAMANT);
+    public Brosche() {
+        EdelsteinImpl saphir = new EdelsteinImpl(75, EdelsteinTyp.SAPHIR);
         edelsteine = new ArrayList();
-        edelsteine.add(diamant);
+        edelsteine.add(saphir);
     }
 
     @Override
     public String getBezeichnung() {
-        return "Platin Armband. Mit einem Diamant besetzt.";
+        return "Eine exquisite Brosche. Mit einem hochwertigen Saphir in Grün besetzt";
     }
 
     @Override
     public Material getMaterial() {
-        return Material.PLATIN;
+        return Material.SILBER;
     }
 
     @Override
     public int getMaterialGewicht() {
-        return 25;
+        return 16;
     }
 
     @Override
     public int getKatalognummer() {
-        return 110;
+        return 696;
     }
 
     @Override
