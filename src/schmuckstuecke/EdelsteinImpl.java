@@ -31,7 +31,7 @@ public class EdelsteinImpl implements stuff.Edelstein {
             case SAPHIR:
                 return 250 * karat;
             case SMARAGD:
-                return 50 * karat;
+                return 700 * karat;
             case AMETHYST:
                 return 20 * karat;
             case RUBIN:
