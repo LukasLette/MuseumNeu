@@ -2,6 +2,7 @@ package stuff;
 
 import org.reflections.Reflections;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,10 +23,14 @@ public class Schatztruhe {
         Collection<Schmuck> schmuckstuecke = new HashSet<>();
         for (Class<? extends Schmuck> schmuckKlasse : allSchmuckClasses) {
             try {
-                schmuckstuecke.add(schmuckKlasse.newInstance());
+                schmuckstuecke.add(schmuckKlasse.getDeclaredConstructor().newInstance());
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
                 e.printStackTrace();
             }
         }

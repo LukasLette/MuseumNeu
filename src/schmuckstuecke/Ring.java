@@ -43,8 +43,6 @@ public class Ring implements Schmuck {
 
     @Override
     public int getGesamtwertInEuro() {
-
-
         return Material.KATZENGOLD.getPreisProGramm() * 6 + 69;
     }
 }

@@ -21,12 +21,12 @@ public class Armband implements Schmuck {
 
     @Override
     public String getBezeichnung() {
-        return "Glänzende Kette. Mit schönem Edelstein in Magenta Farben";
+        return "Platin Armband. Mit einem Diamant besetzt.";
     }
 
     @Override
     public Material getMaterial() {
-        return Material.SILBER;
+        return Material.PLATIN;
     }
 
     @Override
@@ -47,32 +47,13 @@ public class Armband implements Schmuck {
 
     @Override
     public int getGesamtwertInEuro() {
-        int preis = 100;
-        int steinGewicht = 0;
+        int preis = 0;
+        int steinPreis = 0;
+        for (Edelstein edelstein : edelsteine) {
+            steinPreis +=  edelstein.getWert();
+        }
+        preis += getMaterialGewicht() * getMaterial().getPreisProGramm() + steinPreis;
 
-        for (Edelstein edelstein : edelsteine) {
-            steinGewicht += edelstein.getGewichtInKarat() * 0.2;
-        }
-        switch (getMaterial()){
-            case GOLD:
-                preis += getMaterialGewicht() - steinGewicht * 66;
-                break;
-            case SILBER:
-                preis += getMaterialGewicht() - steinGewicht * .6;
-                break;
-            case KATZENGOLD:
-                preis += getMaterialGewicht() - steinGewicht * 2;
-                break;
-            case PLATIN:
-                preis += getMaterialGewicht() - steinGewicht * 30;
-                break;
-            case BLECH:
-                preis += getMaterialGewicht() - steinGewicht * .1;
-                break;
-        }
-        for (Edelstein edelstein : edelsteine) {
-            preis += edelstein.getWert();
-        }
         return preis;
     }
 }
