@@ -29,7 +29,7 @@ public class SchatztruheTest {
             for (Schmuck schmuck : schatz) {
 
                 Material material = schmuck.getMaterial();
-                Assert.assertNotNull("Die Bezeichnung von " + schmuck.getClass().getName() + " ist null", bezeichnung);
+                Assert.assertNotNull("Das Material von " + schmuck.getClass().getName() + " ist null", material);
             }
     }
 
