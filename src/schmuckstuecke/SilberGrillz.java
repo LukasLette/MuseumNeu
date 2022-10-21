@@ -37,7 +37,7 @@ public class SilberGrillz implements Schmuck {
 
     @Override
     public int getKatalognummer() {
-        return 187;
+        return 555;
     }
 
     @Override

@@ -35,7 +35,7 @@ public class Uhr implements Schmuck {
 
     @Override
     public int getKatalognummer() {
-        return 785;
+        return 178;
     }
 
     @Override
