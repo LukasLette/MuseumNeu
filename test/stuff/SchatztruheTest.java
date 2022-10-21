@@ -33,6 +33,18 @@ public class SchatztruheTest {
             }
     }
 
+    public void testeGesamtwertInEuro(){
+
+        Collection<Schmuck> schatz = Schatztruhe.getSchatz();
+
+        for (Schmuck schmuck : schatz) {
+
+            int gesamtwert = schmuck.getGesamtwertInEuro();
+            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu gering" ,gesamtwert < 1000);
+            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu hoch" ,gesamtwert > 10000000);
+
+        }
+    }
 
 
 
