@@ -54,21 +54,21 @@ public class SchatztruheTest {
                     Assert.assertNotNull("Die Edelstein Collection von " + schmuck.getClass().getName() + " ist null", steinSammlung);
                 }
     }
-    @Test
-    public void testeGesamtwertInEuro(){
+            @Test
+            public void testeGesamtwertInEuro(){
 
-        Collection<Schmuck> schatz = Schatztruhe.getSchatz();
+                Collection<Schmuck> schatz = Schatztruhe.getSchatz();
 
-        for (Schmuck schmuck : schatz) {
-
-
-            int gesamtwert = schmuck.getGesamtwertInEuro();
-            System.out.println(gesamtwert + schmuck.getClass().getName());
-            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu gering" ,gesamtwert > 1000);
-            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu hoch" ,gesamtwert < 10000000);
+                for (Schmuck schmuck : schatz) {
 
 
-        }
-    }
+                    int gesamtwert = schmuck.getGesamtwertInEuro();
+                    System.out.println(gesamtwert + schmuck.getClass().getName());
+                    Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu gering" ,gesamtwert > 1000);
+                    Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu hoch" ,gesamtwert < 10000000);
+
+
+                }
+            }
 
 }
