@@ -32,16 +32,19 @@ public class SchatztruheTest {
                 Assert.assertNotNull("Das Material von " + schmuck.getClass().getName() + " ist null", material);
             }
     }
-
+    @Test
     public void testeGesamtwertInEuro(){
 
         Collection<Schmuck> schatz = Schatztruhe.getSchatz();
 
         for (Schmuck schmuck : schatz) {
 
+
             int gesamtwert = schmuck.getGesamtwertInEuro();
-            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu gering" ,gesamtwert < 1000);
-            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu hoch" ,gesamtwert > 10000000);
+            System.out.println(gesamtwert + schmuck.getClass().getName());
+            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu gering" ,gesamtwert > 1000);
+            Assert.assertTrue("Der Preis von " + schmuck.getClass().getName() + "ist zu hoch" ,gesamtwert < 10000000);
+
 
         }
     }
