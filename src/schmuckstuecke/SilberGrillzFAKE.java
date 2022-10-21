@@ -7,13 +7,12 @@ import stuff.Schmuck;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
-public class SilberGrillz implements Schmuck {
+public class SilberGrillzFAKE implements Schmuck {
     private ArrayList<Edelstein> edelsteine;
 
 
-    public SilberGrillz() {
+    public SilberGrillzFAKE() {
         EdelsteinImpl diamant = new EdelsteinImpl(20, EdelsteinTyp.DIAMANT);
         edelsteine = new ArrayList();
         edelsteine.add(diamant);

@@ -1,4 +1,5 @@
 package schmuckstuecke;
+
 import stuff.Edelstein;
 import stuff.EdelsteinTyp;
 import stuff.Material;
@@ -6,44 +7,43 @@ import stuff.Schmuck;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
-public class Ohrring implements Schmuck {
+public class ArmbandFAKE implements Schmuck {
+    private ArrayList<Edelstein> edelsteine;
 
-
-    public Ohrring() {
-
+    public ArmbandFAKE() {
+        EdelsteinImpl amethyst = new EdelsteinImpl(25, EdelsteinTyp.AMETHYST);
+        edelsteine = new ArrayList();
+        edelsteine.add(amethyst);
     }
 
     @Override
     public String getBezeichnung() {
-        return "Silberner Ohrring mit einem Eldelstein in Rot";
+        return "Schönes Armband";
     }
 
     @Override
     public Material getMaterial() {
-        return Material.SILBER;
+        return Material.PLATIN;
     }
 
     @Override
     public int getMaterialGewicht() {
-        return 6;
+        return 10;
     }
 
     @Override
     public int getKatalognummer() {
-        return 420;
+        return 696;
     }
 
     @Override
     public Collection<Edelstein> getVerbauteEdelsteine() {
-        return null;
+        return edelsteine;
     }
 
     @Override
     public int getGesamtwertInEuro() {
-
-
-        return Material.SILBER.getPreisProGramm() * 6;
+        return 10;
     }
 }
