@@ -52,7 +52,7 @@ public class EdelsteinTest extends TestCase {
                 Assert.assertTrue("Der Preis des Edelsteins "+ edelstein.getClass().getName() +" des Schmuckes "+ schmuck.getClass().getName() +" ist null oder negativ!", edelstein.getWert() >0 || edelstein.getWert() == -1);
 
                 if (edelstein.getWert() == -1){
-                    Assert.assertTrue("Der Preis der Schmuckstückes "+ schmuck.getClass().getName() +" des Schmuckes "+ schmuck.getClass().getName()+" konnte ermittelt worden, obwohl der Edelstein einen ungültigen Wert hat!", schmuck.getGesamtwertInEuro() != -1 );
+                    Assert.assertTrue("Der Preis der Schmuckstückes "+ schmuck.getClass().getName() +" des Schmuckes "+ schmuck.getClass().getName()+" konnte ermittelt worden, obwohl der Edelstein einen ungültigen Wert hat!", schmuck.getGesamtwertInEuro() == -1 );
                 }
             }
         }
