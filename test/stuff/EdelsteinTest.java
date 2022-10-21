@@ -22,7 +22,7 @@ public class EdelsteinTest extends TestCase {
             for (Edelstein edelstein: edelsteine
                  ) {
 
-                Assert.assertTrue("Edelstein mit " + edelstein.getGewichtInKarat() + " Karat ist zu leicht oder schwer!", edelstein.getGewichtInKarat()>1 && edelstein.getGewichtInKarat() < 3000 );
+                Assert.assertTrue("Edelstein mit " + edelstein.getGewichtInKarat() + " des Schmuckes "+ schmuck.getClass().getName() +" Karat ist zu leicht oder schwer!", edelstein.getGewichtInKarat()>1 && edelstein.getGewichtInKarat() < 3000 );
 
             }
         }
@@ -37,7 +37,7 @@ public class EdelsteinTest extends TestCase {
             Collection<Edelstein> edelsteine = schmuck.getVerbauteEdelsteine();
             for (Edelstein edelstein: edelsteine) {
 
-                Assert.assertTrue("Edelstein hat keinen gültigen Edelsteintyp", edelstein.getTyp() != null);
+                Assert.assertTrue("Edelstein "+ edelstein.getClass().getName()+" des Schmuckes "+schmuck.getClass().getName()+" hat keinen gültigen Edelsteintyp", edelstein.getTyp() != null);
 
             }
         }
@@ -49,10 +49,10 @@ public class EdelsteinTest extends TestCase {
         for (Schmuck schmuck: schatz) {
             Collection<Edelstein> edelsteine = schmuck.getVerbauteEdelsteine();
             for (Edelstein edelstein: edelsteine) {
-                Assert.assertTrue("Der Preis des Edelsteins ist null oder negativ!", edelstein.getWert() >0 || edelstein.getWert() == -1);
+                Assert.assertTrue("Der Preis des Edelsteins "+ edelstein.getClass().getName() +" des Schmuckes "+ schmuck.getClass().getName() +" ist null oder negativ!", edelstein.getWert() >0 || edelstein.getWert() == -1);
 
                 if (edelstein.getWert() == -1){
-                    Assert.assertTrue("Der Preis der Schmuckstückes konnte ermittelt worden, obwohl der Edelstein einen ungültigen Wert hat!", schmuck.getGesamtwertInEuro() != -1 );
+                    Assert.assertTrue("Der Preis der Schmuckstückes "+ schmuck.getClass().getName() +" des Schmuckes "+ schmuck.getClass().getName()+" konnte ermittelt worden, obwohl der Edelstein einen ungültigen Wert hat!", schmuck.getGesamtwertInEuro() != -1 );
                 }
             }
         }
