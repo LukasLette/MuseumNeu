@@ -56,6 +56,7 @@ public class SilberGrillz implements Schmuck {
         }
         preis += getMaterialGewicht() * getMaterial().getPreisProGramm() + steinPreis;
 
+
         return preis;
     }
 }
