@@ -4,10 +4,10 @@ import stuff.*;
 import java.util.Collection;
 
 @Fake
-public class OhrringFAKE implements Schmuck {
+public class Ohrring implements Schmuck {
 
 
-    public OhrringFAKE() {
+    public Ohrring() {
 
     }
 

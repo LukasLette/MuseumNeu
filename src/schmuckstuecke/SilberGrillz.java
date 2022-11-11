@@ -7,11 +7,11 @@ import java.util.Collection;
 
 
 @Fake
-public class SilberGrillzFAKE implements Schmuck {
+public class SilberGrillz implements Schmuck {
     private ArrayList<Edelstein> edelsteine;
 
 
-    public SilberGrillzFAKE() {
+    public SilberGrillz() {
         EdelsteinImpl diamant = new EdelsteinImpl(20, EdelsteinTyp.DIAMANT);
         edelsteine = new ArrayList();
         edelsteine.add(diamant);

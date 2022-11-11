@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Fake
-public class ArmbandFAKE implements Schmuck {
+public class Armband implements Schmuck {
     private ArrayList<Edelstein> edelsteine;
 
-    public ArmbandFAKE() {
+    public Armband() {
         EdelsteinImpl amethyst = new EdelsteinImpl(25, EdelsteinTyp.AMETHYST);
         edelsteine = new ArrayList();
         edelsteine.add(amethyst);
