@@ -5,6 +5,7 @@ import org.reflections.Reflections;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -16,14 +17,13 @@ public class Schatztruhe {
 
     public static Collection<Schmuck> getSchatz(){
 
-
         Reflections reflections = new Reflections("schmuckstuecke");
 
-        Set<Class<? extends Schmuck>> allSchmuckClasses = reflections.getSubTypesOf(Schmuck.class);
+        Set<Class<?>> allSchmuckClasses = reflections.getTypesAnnotatedWith(Wertvoll.class);
         Collection<Schmuck> schmuckstuecke = new HashSet<>();
-        for (Class<? extends Schmuck> schmuckKlasse : allSchmuckClasses) {
+        for (Class<?> schmuckKlasse : allSchmuckClasses) {
             try {
-                schmuckstuecke.add(schmuckKlasse.getDeclaredConstructor().newInstance());
+                schmuckstuecke.add((Schmuck)schmuckKlasse.getDeclaredConstructor().newInstance());
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             } catch (InstantiationException e) {
