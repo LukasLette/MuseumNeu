@@ -1,13 +1,11 @@
 package schmuckstuecke;
 
-import stuff.Edelstein;
-import stuff.EdelsteinTyp;
-import stuff.Material;
-import stuff.Schmuck;
+import stuff.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Wertvoll
 public class Brosche implements Schmuck {
 
     private ArrayList<Edelstein> edelsteine;
