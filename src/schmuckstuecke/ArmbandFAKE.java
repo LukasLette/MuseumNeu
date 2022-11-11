@@ -5,7 +5,7 @@ import stuff.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Wertvoll
+@Fake
 public class ArmbandFAKE implements Schmuck {
     private ArrayList<Edelstein> edelsteine;
 

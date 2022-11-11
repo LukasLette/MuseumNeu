@@ -1,12 +1,9 @@
 package schmuckstuecke;
-import stuff.Edelstein;
-import stuff.Material;
-import stuff.Schmuck;
-import stuff.Wertvoll;
+import stuff.*;
 
 import java.util.Collection;
 
-@Wertvoll
+@Fake
 public class OhrringFAKE implements Schmuck {
 
 

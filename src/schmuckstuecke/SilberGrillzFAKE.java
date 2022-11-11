@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-@Wertvoll
+@Fake
 public class SilberGrillzFAKE implements Schmuck {
     private ArrayList<Edelstein> edelsteine;
 
